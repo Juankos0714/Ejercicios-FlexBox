@@ -1,89 +1,68 @@
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    height:15vh;
+    background-color:rgb(219, 219, 219);
+    display: flex;
+    font-weight: 700;
+    font-size: 30px;
+    align-items:center;
+    justify-content: center;
+}
+main {
+    display:flex;
+    align-items: flex-start;
+    flex-direction:row;
 
-        /*ejercicio 1*/
-        .main-header {
-            background-color: white;
-            padding: 1rem 2rem;
-        }
 
-        .main-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-        }
+}
+nav{
+    height:75vh;
+    width: 25vw;
+    background-color:rgb(235, 235, 235);
+    display: flex;
+    padding:1%; 
+    
 
-        .logo {
-            height: 40px;
-        }
+}
+article{
+    height:75vh;
+    width: 50vw;
+    background-color:rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    padding-top:1%;
+    gap:1rem;
+    
 
-        .menu {
-            display: flex;
-            gap: 2rem;
-            flex-grow: 1;
-            justify-content: center;
-        }
+}
+h2{
+    font-weight: 700;
+    font-size: 30px;
+}
+aside{
+    height:75vh;
+    width: 25vw;
+    background-color:rgb(235, 235, 235);
+    display: flex;
+    padding:1%;
+     
+    
 
-        .menu a {
-            text-decoration: none;
-            color: #666;
-            cursor: pointer;
-        }
+}
+footer {
+    height: 10vh;
+    background-color:rgb(219, 219, 219);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
 
-        .language {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .language a {
-            text-decoration: none;
-            color: white;
-            background-color: #666;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
-
-        /* Ejerciicio 2*/
-        .menu-list {
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f0f0f0;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .menu-item a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        /* Ejercicioo 3 */
-        .centered-container {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f5f5f5;
-        }
-
-        .centered-box {
-            background-color: #e0e0e0;
-            padding: 2rem;
-            max-width: 400px;
-            text-align: center;
-        }
