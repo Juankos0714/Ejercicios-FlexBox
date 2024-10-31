@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 
+}
+body{
+    line-height: 1.6;
+    color:#333;
+}
+header{
+    width: 100vw;
+    height: 115vh;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(../assets/images/bgHeader.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+
+}
+.text-Header{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+.text-Header h1{
+    color:coral;
+    font-size: 50px;
+    
+    
+
+
+}
+.text-Header h2{
+    color:#333;
+    font-size: 25px;
+
+
+}
+
