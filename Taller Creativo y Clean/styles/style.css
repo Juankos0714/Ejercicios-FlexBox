@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-family: 
+    font-family: "arvo"
 }
 body{
     line-height: 1.6;
@@ -27,10 +27,13 @@ header{
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    text-align: center;
+    padding: 300px 0;
 }
 .text-Header h1{
     color:coral;
-    font-size: 50px;
+    font-size: 60px;
     
     
 
@@ -38,8 +41,41 @@ header{
 }
 .text-Header h2{
     color:#333;
-    font-size: 25px;
+    font-size: 30px;
 
 
 }
+.buttom{
+    display: flex;
+    align-items: center;
+    padding: 0.8% 3%;
+    color: white;
+    border-radius:25px;
+    text-decoration: none;
+    margin-top: 9.5%;
+    background:linear-gradient(90deg, orange, coral);
+
+}
+section{
+    display: flex;
+    
+}
+.text-work{
+    display: flex;
+
+    
+}
+.text-work h1{
+    color:coral;
+    font-size: 60px;
+    
+    
+
+
+}
+.text-work h2{
+    color:#333;
+    font-size: 30px;
+
+
 
