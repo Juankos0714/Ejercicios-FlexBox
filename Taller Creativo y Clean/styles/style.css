@@ -128,7 +128,7 @@ section{
 .resources {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espacio entre el texto y la imagen */
+    gap: 20px; 
     max-width: 1200px;
     width: 100%;
 }
@@ -164,7 +164,7 @@ section{
 
 .image-resources img {
     width: 100%;
-    max-width: 500px; /* Ajusta según el tamaño deseado */
+    max-width: 500px; 
     height: auto;
     border-radius: 4px;
 }
@@ -178,6 +178,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
+    background: linear-gradient(90deg, #ff9d52, #ff8940);
 }
 
 .column {
@@ -206,7 +207,10 @@ footer {
 .Copyright {
     width: 100%;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0px 20px 0px;
+    background: linear-gradient(90deg, #ff9d52, #ff8940);
+    color: white;
+    box-shadow: 0px 0px 8px rgba(168, 62, 0, 0.322);
+
+    
 }
