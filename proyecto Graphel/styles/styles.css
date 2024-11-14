@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "arvo"
+}
+body{
+    line-height: 1.6;
+    color:#333;
+}
+header{
+    background-color: #131b35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 10vh;
+}
+.nav{
+    display: flex;
+    
+}
