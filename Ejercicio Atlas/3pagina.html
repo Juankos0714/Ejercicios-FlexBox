@@ -3,160 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Pricing Page</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background-color: white;
-            overflow-x: hidden;
-        }
-
-        .white-section {
-            background: white;
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .green-section {
-            position: relative;
-            background: #00FFA9;
-            margin-top: -100px;
-            padding-top: 200px;
-            padding-bottom: 100px;
-            clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 50px;
+            padding: 60px 20px;
         }
 
-        .top-content {
+        .title {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .pricing-cards {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 80px;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
         }
 
-        .bottom-content {
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 32px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card.premium {
+            background: #1B2333;
+            color: white;
+        }
+
+        .plan-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .price-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 80px;
+            align-items: baseline;
+            justify-content: center;
+            margin-bottom: 32px;
         }
 
-        .text-content {
-            flex: 1;
-            max-width: 500px;
+        .currency {
+            font-size: 20px;
+            margin-right: 4px;
         }
 
-        .image-content {
-            flex: 1;
+        .price {
+            font-size: 72px;
+            font-weight: bold;
         }
 
-        h1 {
-            font-size: 46px;
-            color: #1E1E1E;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        p {
-            color: #666;
+        .period {
             font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            margin-left: 4px;
+        }
+
+        .features {
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            color: #666;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .premium .feature {
+            color: #ccc;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 35px;
-            background-color: #1E1E2D;
-            color: white;
+            padding: 12px 48px;
+            border-radius: 9999px;
             text-decoration: none;
-            border-radius: 50px;
             font-weight: 500;
-            font-size: 15px;
+            transition: all 0.3s;
+            border: 1px solid #ddd;
+            color: #333;
+            background: transparent;
+            cursor: pointer;
         }
 
-        .laptop-img {
-            width: 100%;
-            max-width: 600px;
-            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-radius: 8px;
+        .btn:hover {
+            background: #f5f5f5;
         }
 
-        .tablet-img {
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-radius: 15px;
+        .premium .btn {
+            background: #00FFA3;
+            border: none;
+            color: black;
         }
 
-        @media (max-width: 968px) {
-            .top-content, .bottom-content {
+        .premium .btn:hover {
+            background: #00E693;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
                 flex-direction: column;
-                gap: 40px;
+                align-items: center;
             }
 
-            .text-content {
-                text-align: center;
-            }
-
-            .laptop-img, .tablet-img {
-                max-width: 100%;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-
-            .green-section {
-                clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-                margin-top: -50px;
-                padding-top: 100px;
+            .card {
+                width: 100%;
+                max-width: 320px;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <section class="white-section">
-        <div class="container">
-            <div class="top-content">
-                <div class="text-content">
-                    <h1>Take a look inside</h1>
-                    <p>Te risque labitur eos, nec sale argumentum scribentur no, augue disputando in vim. Erat fugit sit at, ius lorem deserunt deterruisset no.</p>
-                    <a href="#" class="btn">Learn More</a>
+    <div class="container">
+        <h1 class="title">Check our pricing</h1>
+        <div class="pricing-cards">
+            <div class="card">
+                <h2 class="plan-name">STARTUP</h2>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price">0</span>
+                    <span class="period">/ MO.</span>
                 </div>
-                <div class="image-content">
-                    <img src="./assets/images/feature-1.png" alt="Dashboard on Laptop" class="laptop-img">
+                <div class="features">
+                    <div class="feature">Up to 5 Documents</div>
+                    <div class="feature">Up to 3 Reviews</div>
+                    <div class="feature">5 team Members</div>
+                    <div class="feature">Limited Support</div>
                 </div>
+                <button class="btn">Get Free</button>
             </div>
-        </div>
-    </section>
 
-    <section class="green-section">
-        <div class="container">
-            <div class="bottom-content">
-                <div class="image-content">
-                    <img src="./assets/images/feature-2.png" alt="Dashboard on Tablet" class="tablet-img">
+            <div class="card premium">
+                <h2 class="plan-name">PREMIUM</h2>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price">10</span>
+                    <span class="period">/ MO.</span>
                 </div>
-                <div class="text-content">
-                    <h1>Safe and reliable</h1>
-                    <p>Duo suas detracto majestatis ad, commodo lucilius invenire nec ad, eum et oratio disputationi. Falli lobortis his ad</p>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="features">
+                    <div class="feature">Up to 15 Documents</div>
+                    <div class="feature">Up to 10 Reviews</div>
+                    <div class="feature">25 team Members</div>
+                    <div class="feature">Limited Support</div>
                 </div>
+                <button class="btn">Get Free</button>
+            </div>
+
+            <div class="card">
+                <h2 class="plan-name">PROFESSIONAL</h2>
+                <div class="price-container">
+                    <span class="currency">$</span>
+                    <span class="price">30</span>
+                    <span class="period">/ MO.</span>
+                </div>
+                <div class="features">
+                    <div class="feature">Unlimited Documents</div>
+                    <div class="feature">Unlimited Reviews</div>
+                    <div class="feature">Unlimited Members</div>
+                    <div class="feature">Unlimited Support</div>
+                </div>
+                <button class="btn">Get Free</button>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

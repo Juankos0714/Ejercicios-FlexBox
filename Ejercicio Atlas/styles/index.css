@@ -210,50 +210,109 @@ p {
   background-color: #ffffff;
   color: #1a1f2e;
 }
+.container-2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
 .pricing-title {
   text-align: center;
-  margin-bottom: 3rem;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 60px;
 }
-.pricing-grid {
+
+.pricing-cards {
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-bottom: 4rem;
 }
-.price-card {
-  flex: 1;
-  min-width: 300px;
-  max-width: 350px;
-  padding: 2.5rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+  width: 320px;
   text-align: center;
-  transition: transform 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.price-card.featured {
-  background-color: #00ffad;
-  transform: scale(1.05);
+
+.card.premium {
+  background: #1B2333;
+  color: white;
 }
-.price-card:hover {
-  transform: translateY(-10px);
+
+.plan-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
-.price-card.featured:hover {
-  transform: scale(1.05) translateY(-10px);
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 32px;
 }
+
+.currency {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
 .price {
-  font-size: 2.5rem;
+  font-size: 72px;
   font-weight: bold;
-  margin: 1.5rem 0;
 }
-.price-features {
-  list-style: none;
-  margin: 2rem 0;
+
+.period {
+  font-size: 16px;
+  margin-left: 4px;
 }
-.price-features li {
-  margin: 1rem 0;
+
+.features-2 {
+  margin-bottom: 40px;
+}
+
+.feature-1 {
   color: #666;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.premium .feature {
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 48px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: 1px solid #ddd;
+  color: #333;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+}
+
+.premium .btn {
+  background: #00FFA3;
+  border: none;
+  color: black;
+}
+
+.premium .btn:hover {
+  background: #00E693;
 }
 .clients {
   display: flex;
@@ -290,6 +349,7 @@ p {
   flex: 1;
   min-width: 300px;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
