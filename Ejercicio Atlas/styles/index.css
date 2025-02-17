@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
 }
 body {
   line-height: 1.6;
@@ -49,7 +50,7 @@ button {
   color: #1a1f2e;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
@@ -71,24 +72,18 @@ button:hover {
 .white-section {
   background: white;
   padding: 100px 0;
-  position: relative;
+  display: flex;
+
 }
 
 .green-section {
-  position: relative;
   background: #00FFA9;
-  margin-top: -100px;
+  margin-top: -300px;
   padding-top: 200px;
   padding-bottom: 100px;
   clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  z-index: 100;
 }
-
-.container-2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
-
 .top-content {
   display: flex;
   justify-content: space-between;
@@ -107,6 +102,27 @@ button:hover {
   flex: 1;
   max-width: 500px;
 }
+.text-content h1{
+  color:black;
+}
+.btn-2{
+    display: inline-block;
+    padding: 12px 48px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid #ddd;
+    background-color: #1a1f2e;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn-2:hover {
+    background: #f5f5f5;
+    color:#1a1f2e
+  }
+
 
 .image-content {
   flex: 1;
@@ -126,31 +142,18 @@ p {
   line-height: 1.6;
   margin-bottom: 30px;
 }
-
-.btn {
-  display: inline-block;
-  padding: 12px 35px;
-  background-color: #1E1E2D;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 15px;
-}
-
 .laptop-img {
   width: 100%;
   max-width: 600px;
   transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  z-index: 900;
+  
 }
 
 .tablet-img {
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  border-radius: 15px;
+  
 
 }
 .features {
@@ -173,15 +176,14 @@ p {
   min-width: 300px;
   max-width: 350px;
   padding: 2rem;
-  background-color: #f5f5f5;
   border-radius: 10px;
   text-align: center;
   color: #1a1f2e;
 }
 .feature-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1.5rem;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
 }
 .diagonal-section {
   position: relative;
@@ -210,12 +212,18 @@ p {
   background-color: #ffffff;
   color: #1a1f2e;
 }
+.pricing-grid{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .container-2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .pricing-title {
@@ -241,9 +249,12 @@ p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.card.premium {
+.card:hover {
   background: #1B2333;
   color: white;
+    .btn{
+      
+    }
 }
 
 .plan-name {
@@ -331,13 +342,22 @@ p {
 .clients img:hover {
   opacity: 1;
 }
+.container-contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:2rem;
+}
 .contact {
   padding: 5rem 0;
   background-color: #1a1f2e;
 }
+.contact h2{
+  font-size: 50px;
+}
 .contact-content {
   display: flex;
-  gap: 4rem;
+  gap: 32rem;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -349,7 +369,10 @@ p {
   flex: 1;
   min-width: 300px;
 }
-
+section{
+  display: flex;
+  flex-direction: column;
+}
 .form-group {
   display: flex;
   flex-direction: column;
@@ -373,4 +396,6 @@ footer {
   background-color: #1a1f2e;
   border-top: 1px solid #333;
 }
+
+
 
