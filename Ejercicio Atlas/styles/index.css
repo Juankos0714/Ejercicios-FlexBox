@@ -4,11 +4,14 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
+  width: 100%;
+  
 }
 body {
   line-height: 1.6;
   background-color: #ffffff;
   color: white;
+  width: 100%;
 }
 .container {
   margin: 0 auto;
@@ -21,6 +24,7 @@ header {
   background: url('../assets/images/banner-bk.jpg') left/cover;
   display: flex;
   justify-content: flex-start;
+  width: 100vw;
 }
 .first-page {
   display: flex;
@@ -105,25 +109,6 @@ button:hover {
 .text-content h1{
   color:black;
 }
-.btn-2{
-    display: inline-block;
-    padding: 12px 48px;
-    border-radius: 9999px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 1px solid #ddd;
-    background-color: #1a1f2e;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .btn-2:hover {
-    background: #f5f5f5;
-    color:#1a1f2e
-  }
-
-
 .image-content {
   flex: 1;
 }
@@ -208,7 +193,7 @@ p {
   max-width: 500px;
 }
 .pricing {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #ffffff;
   color: #1a1f2e;
 }
@@ -252,7 +237,13 @@ p {
 .card:hover {
   background: #1B2333;
   color: white;
+    .feature-1{
+      color:white;
+    }
     .btn{
+      background-color: #00ffad;
+      color:#1B2333
+
       
     }
 }
@@ -306,7 +297,6 @@ p {
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
-  border: 1px solid #ddd;
   color: #333;
   background: transparent;
   cursor: pointer;
@@ -315,26 +305,16 @@ p {
 .btn:hover {
   background: #f5f5f5;
 }
-
-.premium .btn {
-  background: #00FFA3;
-  border: none;
-  color: black;
-}
-
-.premium .btn:hover {
-  background: #00E693;
-}
 .clients {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
-  padding: 2rem;
-  background-color: #ffffff;
+  gap: 7rem;
+  padding:5rem;
+  background-color: #cfdbe6ad;
 }
 .clients img {
-  height: 40px;
+  height: 65px;
   width: auto;
   opacity: 0.5;
   transition: opacity 0.3s;
@@ -349,53 +329,125 @@ p {
   gap:2rem;
 }
 .contact {
-  padding: 5rem 0;
-  background-color: #1a1f2e;
+  padding: 6rem 0;
+  background:url("../assets/images/contact-bk.jpg");
 }
 .contact h2{
   font-size: 50px;
 }
+.contact-1-2{
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem;
+
+  button{
+    max-width: 100%;
+  }
+}
+.contact-1-1{
+  display:flex;
+  flex-direction: row;
+  gap:1rem;
+}
 .contact-content {
   display: flex;
-  gap: 32rem;
+  gap: 20rem;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .contact-text {
   flex: 1;
   min-width: 300px;
+  p{
+    color:white;
+
+  }
+  
 }
 .contact-form {
   flex: 1;
   min-width: 300px;
+  
 }
 section{
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
-}
-input, textarea {
+  p{
+    color:#00ffad;
+  }
+} 
+input{
   padding: 1rem;
-  border: 1px solid #333;
+  border: 1px solid #00ffad;
   border-radius: 5px;
-  background-color: #2a2f3e;
+  background:transparent;
   color: white;
+  width: 290px;
+  
+}
+.message{
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
 }
 textarea {
   min-height: 150px;
   resize: vertical;
+  padding: 1rem;
+  border: 1px solid #00ffad;
+  border-radius: 5px;
+  background:transparent;
+  color: white;
+  max-width: 100%;
+  
 }
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 2rem;
   text-align: center;
   background-color: #1a1f2e;
   border-top: 1px solid #333;
+  gap:1rem;
 }
 
-
+.social-networks {
+  background-color:transparent;
+  border-radius: 50%;
+  width: 70px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 10px;
+  flex-direction: row;
+  gap:1rem;
+}
+.social-networks img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 480px) {
+  body{
+    width: 100vw;
+  }
+  .message{
+    max-width: 100px;
+    justify-content: center;
+  }
+  input{
+    width: 100%;
+  }
+  .contact{
+    padding: 1%;
+}
+}
 
