@@ -314,7 +314,7 @@ p {
   background-color: #cfdbe6ad;
 }
 .clients img {
-  height: 65px;
+  height: 50px;
   width: auto;
   opacity: 0.5;
   transition: opacity 0.3s;
@@ -327,10 +327,16 @@ p {
   flex-direction: row;
   justify-content: center;
   gap:2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .contact {
   padding: 6rem 0;
   background:url("../assets/images/contact-bk.jpg");
+  width: 100%;
+  overflow: hidden;
 }
 .contact h2{
   font-size: 50px;
@@ -408,6 +414,11 @@ textarea {
   max-width: 100%;
   
 }
+.message textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 footer {
   display: flex;
   flex-direction: row;
@@ -435,19 +446,291 @@ footer {
   width: 30px;
   height: 30px;
 }
-@media (max-width: 480px) {
-  body{
-    width: 100vw;
-  }
-  .message{
-    max-width: 100px;
-    justify-content: center;
-  }
-  input{
-    width: 100%;
-  }
-  .contact{
-    padding: 1%;
-}
+/* Global fixes for overflow */
+* {
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+.container-2,
+.container-3,
+.container-contact {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-1-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.name,
+.email {
+  flex: 1;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile - 428px */
+@media (max-width: 428px) {
+  header {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    word-wrap: break-word;
+  }
+
+  .container {
+    padding: 0 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .first-page {
+    padding: 1rem;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .features-grid {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .feature-card {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .top-content,
+  .bottom-content {
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .laptop-img,
+  .tablet-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pricing-grid {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-content {
+    gap: 3rem;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .contact-1-1 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input, 
+  textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  .social-networks {
+    width: auto;
+    gap: 0.5rem;
+  }
+  .contact-1-1 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .name,
+  .email {
+    width: 100%;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .contact-form {
+    padding: 0;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .green-section {
+    margin-top: -150px;
+    padding-top: 150px;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .feature-card {
+    width: calc(50% - 1.5rem);
+    min-width: unset;
+  }
+
+  .top-content,
+  .bottom-content {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .text-content,
+  .image-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pricing-grid {
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .card {
+    width: calc(50% - 1.5rem);
+  }
+
+  .clients {
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .clients img {
+    width: auto;
+    height: 40px;
+  }
+  .contact-content {
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .contact-1-1 {
+    gap: 1.5rem;
+  }
+}
+
+
+/* Small Desktop - 920px */
+@media (max-width: 920px) {
+  .container {
+    max-width: 880px;
+    width: 100%;
+  }
+
+  .feature-card {
+    width: calc(33.333% - 1.5rem);
+    min-width: unset;
+  }
+
+  .green-section {
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+}
+
+/* Large Desktop - 1279px */
+@media (max-width: 1279px) {
+  .container {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .features-grid,
+  .pricing-grid {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Additional overflow fixes */
+.white-section,
+.green-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+footer {
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:baseline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

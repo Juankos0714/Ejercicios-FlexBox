@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Page</title>
+    <title>Pricing Plan</title>
     <style>
         * {
             margin: 0;
@@ -13,176 +13,126 @@
         }
 
         body {
-            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fff;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .title {
+        .pricing-container {
             text-align: center;
-            font-size: 36px;
+            padding: 20px;
+        }
+
+        .pricing-title {
+            font-size: 2.5em;
             color: #333;
-            margin-bottom: 60px;
-        }
-
-        .pricing-cards {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 32px;
-            width: 320px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .card.premium {
-            background: #1B2333;
-            color: white;
-        }
-
-        .plan-name {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .price-container {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            margin-bottom: 32px;
-        }
-
-        .currency {
-            font-size: 20px;
-            margin-right: 4px;
-        }
-
-        .price {
-            font-size: 72px;
-            font-weight: bold;
-        }
-
-        .period {
-            font-size: 16px;
-            margin-left: 4px;
-        }
-
-        .features {
             margin-bottom: 40px;
         }
 
-        .feature {
-            color: #666;
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .plan {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan.startup {
+            background-color: #34495e;
+        }
+
+        .plan.premium {
+            background-color: #2c3e50;
+            transform: scale(1.05);
+        }
+
+        .plan h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .plan .price {
+            font-size: 3em;
             margin: 20px 0;
-            font-size: 16px;
         }
 
-        .premium .feature {
-            color: #ccc;
+        .plan ul {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+            padding-left: 20px;
         }
 
-        .btn {
+        .plan ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .plan-button {
             display: inline-block;
-            padding: 12px 48px;
-            border-radius: 9999px;
+            padding: 12px 30px;
+            background-color: #2ecc71;
+            color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            border: 1px solid #ddd;
-            color: #333;
-            background: transparent;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            border: none;
             cursor: pointer;
         }
 
-        .btn:hover {
-            background: #f5f5f5;
-        }
-
-        .premium .btn {
-            background: #00FFA3;
-            border: none;
-            color: black;
-        }
-
-        .premium .btn:hover {
-            background: #00E693;
-        }
-
-        @media (max-width: 768px) {
-            .pricing-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                width: 100%;
-                max-width: 320px;
-                margin-bottom: 20px;
-            }
+        .plan-button:hover {
+            background-color: #27ae60;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Check our pricing</h1>
-        <div class="pricing-cards">
-            <div class="card">
-                <h2 class="plan-name">STARTUP</h2>
-                <div class="price-container">
-                    <span class="currency">$</span>
-                    <span class="price">0</span>
-                    <span class="period">/ MO.</span>
-                </div>
-                <div class="features">
-                    <div class="feature">Up to 5 Documents</div>
-                    <div class="feature">Up to 3 Reviews</div>
-                    <div class="feature">5 team Members</div>
-                    <div class="feature">Limited Support</div>
-                </div>
-                <button class="btn">Get Free</button>
+    <div class="pricing-container">
+        <h1 class="pricing-title">Check our pricing</h1>
+        <div class="pricing-plans">
+            <div class="plan startup">
+                <h2>STARTUP</h2>
+                <div class="price">$0 / Mo.</div>
+                <ul>
+                    <li>Up to 5 Documents</li>
+                    <li>Up to 3 Reviews</li>
+                    <li>5 team Members</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="plan-button">Get Free</a>
             </div>
-
-            <div class="card premium">
-                <h2 class="plan-name">PREMIUM</h2>
-                <div class="price-container">
-                    <span class="currency">$</span>
-                    <span class="price">10</span>
-                    <span class="period">/ MO.</span>
-                </div>
-                <div class="features">
-                    <div class="feature">Up to 15 Documents</div>
-                    <div class="feature">Up to 10 Reviews</div>
-                    <div class="feature">25 team Members</div>
-                    <div class="feature">Limited Support</div>
-                </div>
-                <button class="btn">Get Free</button>
+            
+            <div class="plan premium">
+                <h2>PREMIUM</h2>
+                <div class="price">$10 / Mo.</div>
+                <ul>
+                    <li>Up to 15 Documents</li>
+                    <li>Up to 10 Reviews</li>
+                    <li>25 team Members</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="plan-button">Get Free</a>
             </div>
-
-            <div class="card">
-                <h2 class="plan-name">PROFESSIONAL</h2>
-                <div class="price-container">
-                    <span class="currency">$</span>
-                    <span class="price">30</span>
-                    <span class="period">/ MO.</span>
-                </div>
-                <div class="features">
-                    <div class="feature">Unlimited Documents</div>
-                    <div class="feature">Unlimited Reviews</div>
-                    <div class="feature">Unlimited Members</div>
-                    <div class="feature">Unlimited Support</div>
-                </div>
-                <button class="btn">Get Free</button>
+            
+            <div class="plan">
+                <h2>PROFESSIONAL</h2>
+                <div class="price">$30 / Mo.</div>
+                <ul>
+                    <li>Unlimited Documents</li>
+                    <li>Unlimited Reviews</li>
+                    <li>Unlimited Members</li>
+                    <li>Unlimited Support</li>
+                </ul>
+                <a href="#" class="plan-button">Get Free</a>
             </div>
         </div>
     </div>
