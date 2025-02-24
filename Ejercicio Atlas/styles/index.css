@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 }
 header {
@@ -132,14 +133,10 @@ p {
   max-width: 600px;
   transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
   z-index: 900;
-  
 }
-
 .tablet-img {
   width: 100%;
   max-width: 500px;
-  
-
 }
 .features {
   padding: 5rem 0;
@@ -177,6 +174,18 @@ p {
   transform: skewY(-5deg);
   margin: 6rem 0;
 }
+.btn-2{
+  background-color: #1a1f2e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  max-width: fit-content;
+  transition: all 0.3s;
+}
 .diagonal-content {
   transform: skewY(5deg);
   display: flex;
@@ -202,6 +211,7 @@ p {
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 10%;
 }
 .container-2 {
   max-width: 1200px;
@@ -433,7 +443,6 @@ footer {
 .social-networks {
   background-color:transparent;
   border-radius: 50%;
-  width: 70px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -446,7 +455,6 @@ footer {
   width: 30px;
   height: 30px;
 }
-/* Global fixes for overflow */
 * {
   width: auto;
   max-width: 100%;
@@ -503,9 +511,7 @@ input {
   max-width: 100%;
   box-sizing: border-box;
 }
-
-/* Mobile - 428px */
-@media (max-width: 428px) {
+@media (max-width: 480px) {
   header {
     width: 100%;
     overflow: hidden;
@@ -518,7 +524,6 @@ input {
 
   .container {
     padding: 0 10px;
-    flex-direction: column;
     width: 100%;
   }
 
@@ -529,8 +534,8 @@ input {
   }
 
   .features-grid {
-    gap: 1rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .feature-card {
@@ -553,6 +558,8 @@ input {
   }
 
   .pricing-grid {
+    display:flex;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
   }
@@ -611,10 +618,6 @@ input {
     margin-bottom: 1rem;
   }
 }
-
-
-
-/* Tablet - 768px */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
@@ -625,19 +628,9 @@ input {
     margin-top: -150px;
     padding-top: 150px;
   }
-
-  .features-grid {
-    gap: 1.5rem;
-    width: 100%;
-  }
-
-  .feature-card {
-    width: calc(50% - 1.5rem);
-    min-width: unset;
-  }
-
   .top-content,
   .bottom-content {
+    margin-top: 150px;
     flex-direction: column;
     gap: 60px;
     align-items: center;
@@ -653,11 +646,6 @@ input {
     gap: 1.5rem;
     width: 100%;
   }
-
-  .card {
-    width: calc(50% - 1.5rem);
-  }
-
   .clients {
     gap: 2rem;
     padding: 2rem;
@@ -677,31 +665,22 @@ input {
     gap: 1.5rem;
   }
 }
-
-
-/* Small Desktop - 920px */
 @media (max-width: 920px) {
   .container {
     max-width: 880px;
     width: 100%;
   }
-
-  .feature-card {
-    width: calc(33.333% - 1.5rem);
-    min-width: unset;
-  }
-
   .green-section {
     margin-top: -200px;
     padding-top: 200px;
   }
 }
 
-/* Large Desktop - 1279px */
 @media (max-width: 1279px) {
   .container {
     max-width: 1200px;
     width: 100%;
+    height: auto;
   }
 
   .features-grid,
@@ -710,8 +689,6 @@ input {
     justify-content: center;
   }
 }
-
-/* Additional overflow fixes */
 .white-section,
 .green-section {
   width: 100%;
@@ -727,7 +704,6 @@ footer {
 .social-networks {
   display: flex;
   flex-wrap: wrap;
-  justify-content:baseline;
 }
 
 img {
